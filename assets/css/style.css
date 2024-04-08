@@ -12098,5 +12098,17 @@ textarea.form-control-lg {
   }
 }
 
+* {
+  color: #343A40;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+header {
+  background: #FFC107;
+  padding: 25px;
+}
 
 /*# sourceMappingURL=style.css.map */
