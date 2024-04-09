@@ -2,11 +2,15 @@ nav.nav-produtos{
   background: $cor-secundaria;
   color: $branco;
 
+  a{
+    color: $branco;
+  }
+
   ul.nav{
     li{
       font-size: 16px;
       position: relative;
-      padding: 10px 0px;
+      padding: 10px ;
 
       svg{
         width: 30px;
@@ -14,9 +18,27 @@ nav.nav-produtos{
         margin-right: 5px;
       }
 
+      &:hover{
+        background: darken($color: $cor-secundaria, $amount: 5);
+        ul.nav{
+          display: block;
+        }
+      }
 
       ul.nav{
         display: none;
+        position: absolute;
+        top:45px;
+        left: 0px;
+        z-index: 999;
+        width: 100%;
+
+        border-top:5px solid $cor-primaria ;
+        background: $cor-secundaria;
+
+        li{
+          padding: 10px;
+        }
       }
     }
   }

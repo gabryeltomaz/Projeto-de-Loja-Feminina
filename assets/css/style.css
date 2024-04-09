@@ -12157,18 +12157,82 @@ nav.nav-produtos {
   background: #343A40;
   color: #fff;
 }
+nav.nav-produtos a {
+  color: #fff;
+}
 nav.nav-produtos ul.nav li {
   font-size: 16px;
   position: relative;
-  padding: 10px 0px;
+  padding: 10px;
 }
 nav.nav-produtos ul.nav li svg {
   width: 30px;
   height: 25px;
   margin-right: 5px;
 }
+nav.nav-produtos ul.nav li:hover {
+  background: #292d32;
+}
+nav.nav-produtos ul.nav li:hover ul.nav {
+  display: block;
+}
 nav.nav-produtos ul.nav li ul.nav {
   display: none;
+  position: absolute;
+  top: 45px;
+  left: 0px;
+  z-index: 999;
+  width: 100%;
+  border-top: 5px solid #FFC107;
+  background: #343A40;
+}
+nav.nav-produtos ul.nav li ul.nav li {
+  padding: 10px;
+}
+
+.banners-promocionais-statico {
+  margin-top: 30px;
+}
+.banners-promocionais-statico .banners-promocionais-statico-12x {
+  background-color: #FF0F9A;
+  background-image: url("../img/Parcelas 12x.jpg");
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 1px 5px rgba(0, 0, 0, 0.5));
+  background-position: right;
+  background-position-y: top;
+  background-position-x: 100px;
+}
+.banners-promocionais-statico .banners-promocionais-statico-todo-br {
+  background-color: #B343C3;
+  background-image: url("../img/Entrega todo Pais.jpg");
+  background-repeat: no-repeat;
+  filter: drop-shadow(2px 1px 5px rgba(0, 0, 0, 0.5));
+  background-position: right;
+  background-position-y: top;
+  background-position-x: 100px;
+}
+.banners-promocionais-statico .banners-promocionais-statico-12x, .banners-promocionais-statico .banners-promocionais-statico-todo-br {
+  background-size: cover;
+  height: 105px;
+  padding: 20px 60px;
+  color: #fff;
+}
+.banners-promocionais-statico .banners-promocionais-statico-12x svg, .banners-promocionais-statico .banners-promocionais-statico-12x p, .banners-promocionais-statico .banners-promocionais-statico-todo-br svg, .banners-promocionais-statico .banners-promocionais-statico-todo-br p {
+  margin: 0;
+  padding: 0;
+}
+.banners-promocionais-statico .banners-promocionais-statico-12x svg, .banners-promocionais-statico .banners-promocionais-statico-todo-br svg {
+  width: 50px;
+  height: 50px;
+}
+.banners-promocionais-statico .banners-promocionais-statico-12x p, .banners-promocionais-statico .banners-promocionais-statico-todo-br p {
+  font-weight: 100;
+  font-size: 26px;
+  line-height: 110%;
+  margin-left: 20px;
+}
+.banners-promocionais-statico .banners-promocionais-statico-12x p strong, .banners-promocionais-statico .banners-promocionais-statico-todo-br p strong {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=style.css.map */
