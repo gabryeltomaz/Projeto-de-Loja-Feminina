@@ -1,0 +1,21 @@
+footer{
+  background: $cor-secundaria;
+  padding: 25px 0;
+  color: $branco;
+  h4{
+    color: $cor-primaria;
+    padding: 2px 0;
+    font-size: 19px;
+  }
+
+  ul{
+    li{
+      a{
+        color: $branco;
+        &:hover{
+          color: darken($color: #000, $amount: 0);
+        }
+      }
+    }
+  }
+}
