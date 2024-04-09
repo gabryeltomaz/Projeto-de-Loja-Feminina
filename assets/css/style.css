@@ -12098,7 +12098,7 @@ textarea.form-control-lg {
   }
 }
 
-* {
+body {
   color: #343A40;
 }
 
@@ -12109,6 +12109,66 @@ a {
 header {
   background: #FFC107;
   padding: 25px;
+}
+header form textarea:focus, header form input:focus, header form select:focus {
+  outline: 0;
+}
+header form input[type=text] {
+  background: #fff;
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  padding: 10px 20px;
+}
+header form button {
+  background: none;
+  border: none;
+  position: absolute;
+  right: 650px;
+}
+header ul li {
+  position: relative;
+}
+header ul li span.notificacao {
+  position: absolute;
+  color: #fff;
+  background: #FF0F9A;
+  font-size: 11px;
+  width: 15px;
+  height: 15px;
+  left: 4px;
+  bottom: 30px;
+  border-radius: 100%;
+}
+header ul li a {
+  font-size: 16px;
+  font-weight: bold;
+  color: #343A40;
+}
+header ul li a svg {
+  width: 23px;
+  height: 40px;
+}
+header ul li a:hover {
+  color: initial;
+}
+
+nav.nav-produtos {
+  background: #343A40;
+  color: #fff;
+}
+nav.nav-produtos ul.nav li {
+  font-size: 16px;
+  position: relative;
+  padding: 10px 0px;
+}
+nav.nav-produtos ul.nav li svg {
+  width: 30px;
+  height: 25px;
+  margin-right: 5px;
+}
+nav.nav-produtos ul.nav li ul.nav {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
