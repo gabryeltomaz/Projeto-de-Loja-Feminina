@@ -1,0 +1,180 @@
+@media(max-width: 320px){
+  header{
+    form{
+      button{
+        position: absolute;
+        right: 340px !important;
+      }
+    }
+  }
+  
+}
+
+@media(max-width: 375px){
+
+  
+
+  .banners-promocionais-statico{
+    .banners-promocionais-statico-12x, .banners-promocionais-statico-todo-br{
+      p{
+        font-size: 14px;
+      }
+    }
+
+
+  }
+
+  header{
+    section{
+      article{
+        form{
+          button{
+              svg{
+                position: absolute;
+                right: -300px;
+              }
+          }
+        }
+      }
+    }
+  }
+
+  .produtos-container {
+    img{
+      width: 100%;
+    }
+
+    #preco_cropped{
+      position: absolute;
+      top: 1170px !important;
+    }
+
+    #preco_blusa{
+      position: absolute;
+      top: 1720px !important;
+    }
+
+    #preco_camisa{
+      position: absolute;
+      //bottom: 2270px !important;
+    }
+
+    #preco_saia{
+      position: absolute;
+      top: 2820px !important;
+    }
+  }
+
+
+
+
+
+
+
+
+
+}
+
+@media (max-width: 767px){
+  header{
+    a{
+      margin: 20px 0;
+    }
+
+    form{
+      margin: 20px 0 20px 0;
+      button{
+        svg{
+          position: absolute;
+          right: -200px;
+        }
+      }
+    }
+  }
+
+  #banners-promocionais{
+    display: none;
+  }
+
+  .banners-promocionais-statico-12x{
+    margin-bottom: 15px;
+  }
+
+  .produtos-container {
+    img{
+      width: 100%;
+    }
+
+    #preco_cropped{
+      position: absolute;
+      top: 1380px;
+    }
+
+    #preco_blusa{
+      position: absolute;
+      top: 2140px;
+    }
+
+    #preco_camisa{
+      position: absolute;
+      top: 2902px !important;
+    }
+
+    #preco_saia{
+      position: absolute;
+      top: 3662px;
+    }
+
+    .img-fluid{
+      margin: 30px 0 0 0;
+    }
+
+  }
+
+  
+
+
+}
+
+@media (max-width: 991px){
+
+  header{
+    ul{
+      li{
+        margin: 7px 0;
+      }
+    }
+
+    form{
+      button{
+        position: absolute;
+        right: 340px;
+      }
+    }
+  }
+
+
+}
+
+@media(max-width: 1024px){
+  header{
+    form{
+      button{
+        position: absolute;
+        right: 300px;
+      }
+    }
+  }
+
+  .produtos-container{
+    .produtos-itens{
+      strong{
+        top: 875px;
+      }
+      #preco_camisa{
+        top: 910px;
+      }
+    }
+
+  }
+}
