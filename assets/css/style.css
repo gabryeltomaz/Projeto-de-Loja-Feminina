@@ -12381,5 +12381,13 @@ footer ul li a:hover {
     top: 910px;
   }
 }
+.breadcrumb {
+  background: initial;
+  margin: 40px 0;
+  padding: 0;
+}
+.breadcrumb a {
+  color: #FF0F9A;
+}
 
 /*# sourceMappingURL=style.css.map */

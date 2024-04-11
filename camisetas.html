@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Nome do site-->
+  <title>Projeto de Loja Feminina - Camisetas</title>
+
+  <!--Links para logo do site-->
+  <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/favicon imgs/">
+  <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/favicon imgs/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicon imgs/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/favicon imgs/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/favicon imgs/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/favicon imgs/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/favicon imgs/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/favicon imgs/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicon imgs/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="./assets/img/favicon imgs/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/favicon imgs/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/favicon imgs/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/favicon imgs/favicon-16x16.png">
+  <link rel="manifest" href="./assets/img/favicon imgs/manifest.json">
+  <meta name="msapplication-TileColor" content="##FFC107">
+  <meta name="msapplication-TileImage" content="./assets/img/favicon imgs/ms-icon-144x144.png">
+  <meta name="theme-color" content="##FFC107">
+
+  <!--Link para configs do css-->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  
+  <!--cabeçalho do site-->
+  <header class="container-fluid">
+
+    <section class="container">
+
+      <!--Row de elementos do cabeçalho-->
+      <article class="row d-flex align-items-center">
+
+        <!--Parte da logo com 2 colunas-->
+        <a href="./" class="col-md-2 d-flex justify-content-center">
+
+          <!--logo do site-->
+          <img src="./assets/img/logo.svg" class="img-fluid" alt="Logo da empresa">
+
+        </a>
+
+        <!--Barra de pesquisa-->
+        <form action="#" class="col-md-7 d-flex align-items-center">
+          <!--O input da barra de pesquisa-->
+          <input type="text" name="name" placeholder="Procure roupas aqui">
+
+          <!--o botao de pesquisar na barra de pesquisa (lupa)-->
+          <button class="d-flex align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>
+          </button>
+        </form>
+
+        <!--lista no modo row do lado direito com o login e carrinho-->
+        <ul class="nav col-md-3 d-flex justify-content-around align-items-center">
+
+          <!--login com imagem de pessoa-->
+          <li class="nav-item">
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+              </svg>
+              Entrar
+
+            </a>
+          </li>
+
+          <!--carrinho com notificação-->
+          <li class="nav-item">
+            <!--notificação de quantos item no carrinho-->
+            <span class="notificacao d-flex justify-content-center align-items-center">3</span>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>
+              Carrinho
+            </a>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </header>
+
+  <!--navegação de filtros-->
+  <nav class="container-fluid nav-produtos">
+    <section class="container">
+
+      <!--lista em row dos tipos de filtros-->
+      <ul class="nav">
+
+        <!--um filtro "maior"-->
+        <li class="nav-item d-flex align-items-center col-xl-2 col-md-12 col-lg-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+          Moda feminina
+
+          <!--filtros dentro do filtro-->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="#">Lançamentos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Promoção</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Plus size</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Moda Praia</a>
+            </li>
+            <li class="nav-item">
+              <a href="#">Acessorios</a>
+            </li>
+          </ul>
+
+
+
+        </li>
+
+        <!--outro filtro "maior"-->
+        <li class="nav-item d-flex align-items-center col-xl-2 col-md-12 col-lg-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+          </svg>
+          Calçados
+        </li>
+      </ul>
+    </section>
+  </nav>
+
+  <!--parte principal do site-->
+  <main>
+
+    <!--Parte dos produtos-->
+    <section class="container">
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="./">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Camisetas</li>
+        </ol>
+      </nav>
+
+      <!--titulo-->
+      <h1>Veja todos os nossos produtos mais vendidos</h1>
+      <p>
+        Todos os meses disponibilizamos uma grande variedade 
+        de looks que são hits e queridinhos do momento através 
+        de lançamentos exclusivos de moda Feminina. 
+        Também oferecemos anualmente quatro coleções que mostram 
+        as peças que são desejo em cada estação e como combiná-las 
+        para valorizar ainda mais o estilo da mulher brasileira, 
+        super feminina e que preza pelo conforto. 
+        A diversidade das peças foi o jeito que a Quintess encontrou
+        para retratar o perfil vibrante, alegre e independente de nossas 
+        clientes com tamanhos que vão do PP ao XLG.
+        
+      </p>
+
+      <!--listagem de produtos-->
+      <article class="row">
+
+        <!--Produto 1 (cropped rosa)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem do cropped-->
+          <img src="./assets/img/cropped-rosa.jpg" class="img-fluid" alt="cropped-rosa" >
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Cropped rosa</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+  
+            <!--preço-->
+            <strong id="preco_cropped" style="top: 830px;">R$: 59,90</strong>
+      
+
+
+          </article>
+
+        </a>
+
+        <!--Produto 2 (camisa listrada)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem do cropped-->
+          <img src="./assets/img/camiseta-manga-comprida.jpg" class="img-fluid" alt="blusa listrada manga comprida" >
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Blusa listrada</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+            <!--preço-->
+            <strong id="preco_blusa" style="top: 830px;">R$: 79,90</strong>
+
+
+
+          </article>
+
+        </a>
+
+
+        <!--Produto 3 (Camisa de botão)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem da camisa-->
+          <img src="./assets/img/camiseta-listrada.jpg" class="img-fluid" alt="camisa de botao">
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Camisa de botão</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+            <!--preço-->
+            <strong id="preco_camisa" style="top: 830px;">R$: 49,90</strong>
+
+
+
+          </article>
+
+        </a>        
+
+
+        <!--Produto 4 (saia plisada)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem da saia-->
+          <img src="./assets/img/saia-plisada.jpg" class="img-fluid" alt="saia plisada">
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Saia plisada</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+            <!--preço-->
+            <strong id="preco_saia" style="top: 830px;">R$: 117,90</strong>
+
+
+
+          </article>
+
+        </a>
+
+        <!--Produto 1 (cropped rosa)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+                  <!--imagem do cropped-->
+                  <img src="./assets/img/cropped-rosa.jpg" class="img-fluid" alt="cropped-rosa">
+        
+                  <!--nome do produto-->
+                  <article class="produtos-itens">
+                    <h2>Cropped rosa</h2>
+        
+                    <!--quantidade de estrelas-->
+                    <div class="produto-stars">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                    </div>
+        
+          
+                    <!--preço-->
+                    <strong id="preco_cropped" style="top: 1265px;">R$: 59,90</strong>
+              
+        
+        
+                  </article>
+        
+        </a>
+        
+        <!--Produto 2 (camisa listrada)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+        
+                  <!--imagem do cropped-->
+                  <img src="./assets/img/camiseta-manga-comprida.jpg" class="img-fluid" alt="blusa listrada manga comprida">
+        
+                  <!--nome do produto-->
+                  <article class="produtos-itens">
+                    <h2>Blusa listrada</h2>
+        
+                    <!--quantidade de estrelas-->
+                    <div class="produto-stars">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                    </div>
+        
+                    <!--preço-->
+                    <strong id="preco_blusa" style="top: 1265px;">R$: 79,90</strong>
+        
+        
+        
+                  </article>
+        
+        </a>
+        
+        
+        <!--Produto 3 (Camisa de botão)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+        
+                  <!--imagem da camisa-->
+                  <img src="./assets/img/camiseta-listrada.jpg" class="img-fluid" alt="camisa de botao">
+        
+                  <!--nome do produto-->
+                  <article class="produtos-itens">
+                    <h2>Camisa de botão</h2>
+        
+                    <!--quantidade de estrelas-->
+                    <div class="produto-stars">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                    </div>
+        
+                    <!--preço-->
+                    <strong id="preco_camisa" style="top: 1265px;">R$: 49,90</strong>
+        
+        
+        
+                  </article>
+        
+        </a>        
+        
+        
+        <!--Produto 4 (saia plisada)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+        
+                  <!--imagem da saia-->
+                  <img src="./assets/img/saia-plisada.jpg" class="img-fluid" alt="saia plisada">
+        
+                  <!--nome do produto-->
+                  <article class="produtos-itens">
+                    <h2>Saia plisada</h2>
+        
+                    <!--quantidade de estrelas-->
+                    <div class="produto-stars">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+        
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                      </svg>
+                    </div>
+        
+                    <!--preço-->
+                    <strong id="preco_saia" style="top: 1265px;">R$: 117,90</strong>
+        
+        
+        
+                  </article>
+        
+        </a>
+
+        <!--Produto 1 (cropped rosa)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem do cropped-->
+          <img src="./assets/img/cropped-rosa.jpg" class="img-fluid" alt="cropped-rosa">
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Cropped rosa</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+  
+            <!--preço-->
+            <strong id="preco_cropped" style="top: 1700px;">R$: 59,90</strong>
+      
+
+
+          </article>
+
+        </a>
+
+        <!--Produto 2 (camisa listrada)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem do cropped-->
+          <img src="./assets/img/camiseta-manga-comprida.jpg" class="img-fluid" alt="blusa listrada manga comprida">
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Blusa listrada</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+            <!--preço-->
+            <strong id="preco_blusa" style="top: 1700px;">R$: 79,90</strong>
+
+
+
+          </article>
+
+        </a>
+
+
+        <!--Produto 3 (Camisa de botão)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem da camisa-->
+          <img src="./assets/img/camiseta-listrada.jpg" class="img-fluid" alt="camisa de botao">
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Camisa de botão</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+            <!--preço-->
+            <strong id="preco_camisa" style="top: 1700px;">R$: 49,90</strong>
+
+
+
+          </article>
+
+        </a>        
+
+
+        <!--Produto 4 (saia plisada)-->
+        <a href="#" class="produtos-container col-md-3" style="margin: 20px 0 20px 0;">
+
+          <!--imagem da saia-->
+          <img src="./assets/img/saia-plisada.jpg" class="img-fluid" alt="saia plisada">
+
+          <!--nome do produto-->
+          <article class="produtos-itens">
+            <h2>Saia plisada</h2>
+
+            <!--quantidade de estrelas-->
+            <div class="produto-stars">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+              </svg>
+            </div>
+
+            <!--preço-->
+            <strong id="preco_saia" style="top: 1700px;">R$: 117,90</strong>
+
+
+
+          </article>
+
+        </a>
+
+      </article>
+
+
+
+
+    </section>
+
+  </main>
+
+  <!--rodapé do site-->
+  <footer class="container-fluid">
+
+    <!--caixa de itens-->
+    <section class="container">
+
+      <!--linha de itens-->
+      <section class="row">
+
+        <!--caixa 1 de atendimento-->
+        <article class="col-md-4">
+
+          <!--titulo-->
+          <h4>Atendimento</h4>
+
+          <!--lista de contatos para atendimento-->
+          <ul class="nav flex-column">
+
+            <li class="nav-item">
+              <a href="#">(34) 9 xxxx-xxxx</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">contato@sualoja.com</a>
+            </li>
+
+            <li class="nav-item">
+              <p>Horário de atendimento online:<br>
+                 Segunda a sexta das 9:00 ás 17:30</p>
+            </li>
+          </ul>
+        </article>
+
+        <!--caixa 2 de acesso rapido-->
+        <article class="col-md-3">
+
+          <!--titulo-->
+          <h4>Acesso rápido</h4>
+
+          <!--lista de de acessos rapidos-->
+          <ul class="nav flex-column">
+
+            <li class="nav-item">
+              <a href="#">Minha conta</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">Meus pedidos</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">Rastrear meus pedidos</a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">Trocas e devoluções</a>
+            </li>
+
+          </ul>
+
+        </article>
+
+        <!--caixa 3 de institucionais-->
+        <article class="col-md-3">
+
+          <!--lista de politicas-->
+          <ul class="nav flex-column">
+
+            <!--titulo-->
+            <h4>Institucional</h4>
+
+            <li class="nav-item">
+
+              <a href="#">Sobre a loja</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a href="#">Politica e privacidade</a>
+
+            </li>
+
+          </ul>
+
+        </article>
+
+        <!--caixa 4 de mais acessados-->
+        <article class="col-md-2">
+
+          <!--titulo-->
+          <h4>Mais acessados</h4>
+
+          <ul class="nav flex-column">
+
+            <li class="nav-item">
+
+              <a href="#">Cropped rosa</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a href="#">Camisa de botão</a>
+
+            </li>
+
+            <li class="nav-item">
+
+              <a href="#">Blusa listrada</a>
+
+            </li>
+            
+            <li class="nav-item">
+
+              <a href="#">Saia plisada</a>
+
+            </li>
+
+
+          </ul>
+
+
+        </article>
+
+
+
+      </section>
+
+
+
+
+    </section>
+
+
+
+
+
+
+  </footer>
+
+
+
+
+
+  <script src="./assets/js/bootstrap.bundle.min.js" ></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+</body>
+</html>
