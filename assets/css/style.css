@@ -12292,6 +12292,22 @@ footer ul li a:hover {
     position: absolute;
     right: 340px !important;
   }
+  .produtos-container .produtos-itens #preco_cropped {
+    position: absolute;
+    top: 1145px !important;
+  }
+  .produtos-container .produtos-itens #preco_blusa {
+    position: absolute;
+    top: 1623px !important;
+  }
+  .produtos-container .produtos-itens #preco_camisa {
+    position: absolute;
+    top: 2103px !important;
+  }
+  .produtos-container .produtos-itens #preco_saia {
+    position: absolute;
+    top: 2583px !important;
+  }
 }
 @media (max-width: 375px) {
   .banners-promocionais-statico .banners-promocionais-statico-12x p, .banners-promocionais-statico .banners-promocionais-statico-todo-br p {
@@ -12318,6 +12334,24 @@ footer ul li a:hover {
   .produtos-container #preco_saia {
     position: absolute;
     top: 2820px !important;
+  }
+}
+@media (max-width: 425px) {
+  .produtos-container .produtos-itens #preco_cropped {
+    position: absolute;
+    top: 1235px !important;
+  }
+  .produtos-container .produtos-itens #preco_blusa {
+    position: absolute;
+    top: 1850px !important;
+  }
+  .produtos-container .produtos-itens #preco_camisa {
+    position: absolute;
+    top: 2463px !important;
+  }
+  .produtos-container .produtos-itens #preco_saia {
+    position: absolute;
+    top: 3075px !important;
   }
 }
 @media (max-width: 767px) {
@@ -12378,10 +12412,10 @@ footer ul li a:hover {
     right: 300px;
   }
   .produtos-container .produtos-itens strong {
-    top: 875px;
+    top: 875px !important;
   }
   .produtos-container .produtos-itens #preco_camisa {
-    top: 910px;
+    top: 910px !important;
   }
 }
 @media (max-width: 1366px) {

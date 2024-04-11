@@ -8,6 +8,31 @@
     }
   }
   
+  .produtos-container{
+    .produtos-itens{
+      #preco_cropped{
+        position: absolute;
+        top: 1145px !important;
+      }
+
+      #preco_blusa{
+        position: absolute;
+        top: 1623px !important;
+      }
+
+      #preco_camisa{
+        position: absolute;
+        top: 2103px !important;
+      }
+
+      #preco_saia{
+        position: absolute;
+        top: 2583px !important;
+      }
+    }
+  }
+
+
 }
 
 @media(max-width: 375px){
@@ -73,6 +98,32 @@
 
 
 
+}
+
+@media(max-width: 425px){
+  .produtos-container{
+    .produtos-itens{
+      #preco_cropped{
+        position: absolute;
+        top: 1235px !important;
+      }
+
+      #preco_blusa{
+        position: absolute;
+        top: 1850px !important;
+      }
+
+      #preco_camisa{
+        position: absolute;
+        top: 2463px !important;
+      }
+
+      #preco_saia{
+        position: absolute;
+        top: 3075px !important;
+      }
+    }
+  }
 }
 
 @media (max-width: 767px){
@@ -177,10 +228,10 @@
   .produtos-container{
     .produtos-itens{
       strong{
-        top: 875px;
+        top: 875px !important;
       }
       #preco_camisa{
-        top: 910px;
+        top: 910px !important;
       }
     }
 
