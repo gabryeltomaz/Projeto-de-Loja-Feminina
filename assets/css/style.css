@@ -12368,6 +12368,9 @@ footer ul li a:hover {
     position: absolute;
     right: 340px;
   }
+  .produtos-container .produtos-itens strong {
+    top: 843px !important;
+  }
 }
 @media (max-width: 1024px) {
   header form button {
@@ -12379,6 +12382,11 @@ footer ul li a:hover {
   }
   .produtos-container .produtos-itens #preco_camisa {
     top: 910px;
+  }
+}
+@media (max-width: 1366px) {
+  .produtos-container .produtos-itens strong {
+    top: 955px;
   }
 }
 .breadcrumb {
